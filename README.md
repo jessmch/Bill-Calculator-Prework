@@ -1,10 +1,10 @@
-# Pre-work - *Prework*
+# Pre-work - *Name of App Here*
 
-**Prework** is a tip calculator application for iOS.
+**Tip Calculator** is a tip calculator application for iOS.
 
 Submitted by: **Chau Ho**
 
-Time spent: **6** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Implement dark mode for the app
+- [x] Implement dark mode
 - [x] User can choose the tip percentage by either tapping different values on the segmented control or using the slider below it and the tip value is updated accordingly
 - [x] User can choose to split the bill by 1 or 2 or 3 or 4, then choose the tip percentage again and the tip value is updated accordingly
 - [x] User can choose to convert the bill's currency (default currency is in US Dollar) either to Canadian Dollar or Australian Dollar by tapping different currency types on the segmented control.
@@ -31,17 +31,18 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![](https://i.imgur.com/6h9jb7e.gif)
+![](https://i.imgur.com/DIelJya.gif)
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-This is the first time that I learn how to create an IOS application by using Swift language via Xcode; there are several challenges that I encountered while building this app. The biggest challenge was to figure out how to let the user use both different tip percentage values on the segmented control and the slider. Also, I use the currency rate as of February 27th, 2021 for this application.
+Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2021] [Chau Ho]
+    Copyright [yyyy] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -54,3 +55,4 @@ This is the first time that I learn how to create an IOS application by using Sw
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
