@@ -1,11 +1,7 @@
-//
-//  ViewController.swift
-//  Prework
-//
-//  Created by Jess on 2/27/21.
-//
-
 import UIKit
+
+//Access UserDefaults
+let defaults = UserDefaults.standard
 
 class ViewController: UIViewController {
 
@@ -26,6 +22,14 @@ class ViewController: UIViewController {
         overrideUserInterfaceStyle = .dark
 
         // Do any additional setup after loading the view.
+        
+        // Sets the title in the Navigation Bar
+            self.title = "Tip Calculator"
+        
+        let defaults = UserDefaults.standard
+        
+        // Get an Integer value.
+        let intValue = defaults.integer(forKey: "tipSlide")
     
     }
     @IBAction func calculateTip(_ sender: Any) {
@@ -47,7 +51,7 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
         
         
-        // Update Bill Exchange (currency rate as of July 27th, 2021)
+        // Update Bill Exchange
         let splitExchange = [1, 1.27, 1.3]
         let totalExchange = total/Double(splitExchange[currencyType.selectedSegmentIndex])
         
@@ -121,11 +125,33 @@ class ViewController: UIViewController {
         let total = (bill + tip) / Double(splitAmount[billSplit.selectedSegmentIndex])
         totalLabel.text = String(format: "$%.2f", total)
         
-        // Update Bill Exchange (currency rate as of July 27th, 2021)
+        // Update Bill Exchange
         let splitExchange = [1, 1.27, 1.3]
         let totalExchange = total/Double(splitExchange[currencyType.selectedSegmentIndex])
         
         billExchange.text = String(format: "$%.2f", Double(totalExchange))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+        // This is a good place to retrieve the default tip percentage from UserDefaults
+        // and use it to update the tip amount
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did disappear")
     }
     
 }
